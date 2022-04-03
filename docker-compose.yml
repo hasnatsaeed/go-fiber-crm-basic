@@ -2,8 +2,8 @@ version: '3.9'
 
 services:
   app:
-    image: go-bookstore
-    container_name: main
+    image: go-fiber-crm-basic
+    container_name: app
     restart: always
     ports:
       - "9010:9010"
