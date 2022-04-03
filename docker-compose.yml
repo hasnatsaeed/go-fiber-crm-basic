@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  app:
+    image: go-bookstore
+    container_name: main
+    restart: always
+    ports:
+      - "9010:9010"
+    depends_on:
+      - "db"
+  db:
+    image: mysql:8.0.25
+    container_name: db
+    restart: always
+    ports:
+      - "3308:3306"
+    environment:
+      MYSQL_USER: spxUsr
+      MYSQL_PASSWORD: vqkWWHptpCwmkgDw8twQuExC
+      MYSQL_ROOT_PASSWORD: vqkWWHptpCwmkgDw8twQuExC
+      MYSQL_DATABASE: go-crm-basic
